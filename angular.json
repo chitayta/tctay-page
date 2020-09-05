@@ -28,9 +28,16 @@
               "projects/profile-page/src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "./node_modules/jquery-ui-dist/jquery-ui.css",
               "projects/profile-page/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js",
+              "./node_modules/jquery-ui-dist/jquery-ui.js",
+              "./projects/profile-page/src/js/scripts.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -123,6 +130,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "profile-page"
 }

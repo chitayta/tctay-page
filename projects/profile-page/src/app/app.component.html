@@ -1,14 +1,17 @@
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
-  <div class="container"><img style="height: 50px" src="assets/img/avataaars.svg">&nbsp;&nbsp;<div
-    class="navbar-brand js-scroll-trigger" href="#page-top">Welcome to my home!
-  </div>
+  <div class="container">
+    <div class="d-flex">
+      <img class="page-icon" src="assets/img/man.png">
+      &nbsp;&nbsp;
+      <div class="navbar-brand js-scroll-trigger d-flex align-items-center welcome-title" href="#page-top">Welcome to my home!</div>
+    </div>
     <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button"
             data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
             aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                                             href="#portfolio">PROJECTS</a>
+                                             href="#portfolio" (click)="onScrollSmoothly(projects)">PROJECTS</a>
         </li>
         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">ABOUT</a>
         </li>
@@ -19,25 +22,32 @@
     </div>
   </div>
 </nav>
-<header class="masthead bg-with-image bg-primary text-white text-center">
-  <div class="container d-flex align-items-end flex-column">
-    <!-- Masthead Avatar Image-->
-    <!--    <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="">-->
-    <!-- Masthead Heading-->
-    <h1 class="masthead-heading mb-0">TAY TA CHI</h1>
-    <!-- Icon Divider-->
-    <div class="divider-custom divider-light justify-content-end">
-      <div class="divider-custom-line"></div>
+<div class="row mx-0">
+  <div class="col-sm-12 col-md-6 col-lg-8 masthead bg-with-image"></div>
+  <header class="col-sm-12 col-md-6 col-lg-4 masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+      <!-- Masthead Avatar Image-->
+      <!--    <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="">-->
+      <!-- Masthead Heading-->
+      <h1 class="masthead-heading mb-0">TAY CHI TA</h1>
+      <!-- Icon Divider-->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <!-- Masthead Subheading-->
+      <p class="pre-wrap masthead-subheading font-weight-light mb-0">Software Engineer</p>
     </div>
-    <!-- Masthead Subheading-->
-    <p class="pre-wrap masthead-subheading font-weight-light mb-0">Software Engineer</p>
-  </div>
-</header>
-<section class="page-section portfolio" id="portfolio">
+  </header>
+</div>
+<section class="page-section portfolio" id="portfolio" #projects>
   <div class="container">
     <!-- Portfolio Section Heading-->
     <div class="text-center">
       <h2 class="page-section-heading text-secondary mb-0 d-inline-block">PROJECTS</h2>
+      <p class="pre-wrap mt-4"><strong>Highlighted projects which I have my honor to work on (in my career) :)</strong>
+      </p>
     </div>
     <!-- Icon Divider-->
     <div class="divider-custom">
@@ -51,7 +61,8 @@
       <div class="col-md-6 col-lg-4 mb-5">
         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
           <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-info-circle fa-3x"></i>
+            </div>
           </div>
           <img class="img-fluid" src="assets/img/projects/db.jpg" alt="Deutsche Bahn"/>
         </div>
@@ -59,7 +70,8 @@
       <div class="col-md-6 col-lg-4 mb-5">
         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
           <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-info-circle fa-3x"></i>
+            </div>
           </div>
           <img class="img-fluid" src="assets/img/projects/dhl.png" alt="DHL"/>
         </div>
@@ -67,7 +79,8 @@
       <div class="col-md-6 col-lg-4 mb-5">
         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
           <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-info-circle fa-3x"></i>
+            </div>
           </div>
           <img class="img-fluid" src="assets/img/projects/mobi.png" alt="die Mobiliar"/>
         </div>
@@ -97,10 +110,11 @@
               <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/projects/db.jpg"
                                                   alt="Deutsche Bahn"/>
               <!-- Portfolio Modal - Text-->
-              <p class="mb-5">A cloud-based web application for <strong>Deutsche Bahn</strong>, a German railway company. Provide functionalities to the
+              <p class="mb-5">A cloud-based web application for <strong>Deutsche Bahn</strong>, a German railway
+                company. Provide functionalities to the
                 office management team to manage shifts and hotel booking information for their railway staffs.</p>
               <p><strong>Technologies</strong> Angular, .NET, Signal R, Cosmos DB, Microsoft SQL Server</p>
-              <button class="btn btn-primary" href="#" data-dismiss="modal">Thanks for viewing &nbsp;<i
+              <button class="btn btn-primary" href="#" data-dismiss="modal">Thanks &nbsp;<i
                 class="far fa-smile"></i>
               </button>
             </div>
@@ -131,10 +145,11 @@
               <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/projects/dhl.png"
                                                   alt="DHL"/>
               <!-- Portfolio Modal - Text-->
-              <p class="mb-5">A service to manage shipment booking pricing calculation at <strong>DHL</strong> logistic company for their business in South East Asia. Provide
+              <p class="mb-5">A service to manage shipment booking pricing calculation at <strong>DHL</strong> logistic
+                company for their business in South East Asia. Provide
                 functionalities to manage and expose REST service for logistic pricing calculation.</p>
               <p><strong>Technologies</strong> Java, Spring, JPA, Angular, Rest API, PostgreSQL</p>
-              <button class="btn btn-primary" href="#" data-dismiss="modal">Thanks for viewing &nbsp;<i
+              <button class="btn btn-primary" href="#" data-dismiss="modal">Thanks &nbsp;<i
                 class="far fa-smile"></i>
               </button>
             </div>
@@ -165,9 +180,10 @@
               <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5"
                                                   src="assets/img/projects/mobi.png" alt="die Mobiliar"/>
               <!-- Portfolio Modal - Text-->
-              <p class="mb-5">A system for <strong>die Mobiliar</strong>, an insurance company in Switzerland, to manage and operate their business.</p>
+              <p class="mb-5">A system for <strong>die Mobiliar</strong>, an insurance company in Switzerland, to manage
+                and operate their business.</p>
               <p><strong>Technologies</strong> Angular, Java, Kafka, Spring, Hibernate, Oracle</p>
-              <button class="btn btn-primary" href="#" data-dismiss="modal">Thanks for viewing &nbsp;<i
+              <button class="btn btn-primary" href="#" data-dismiss="modal">Thanks &nbsp;<i
                 class="far fa-smile"></i>
               </button>
             </div>
@@ -182,6 +198,7 @@
     <!-- About Section Heading-->
     <div class="text-center">
       <h2 class="page-section-heading d-inline-block text-white">ABOUT</h2>
+      <p class="pre-wrap mt-4"><strong>Here is more information about me (if you want to know) ;)</strong></p>
     </div>
     <!-- Icon Divider-->
     <div class="divider-custom divider-light">
@@ -192,14 +209,16 @@
     <!-- About Section Content-->
     <div class="row">
       <div class="col-lg-4 ml-auto">
-        <p class="pre-wrap lead">I am a software engineer based in HCMC, Vietnam. I start my career at TMA
-          Solutions after graduation from HCMC University of Technology in March, 2018. </p>
-        <p class="pre-wrap lead">I have worked there for 2 years before becoming a member of Axon Active Vietnam since
-          July, 2020.</p>
+        <p class="pre-wrap lead">I am a software engineer based in HCMC, Vietnam. </p>
+        <p class="pre-wrap lead">I started my career at TMA Solutions after I graduated from the HCMC University of
+          Technology in Computer Science in April 2018. I have worked there for more than 2 years before becoming a
+          member of
+          Axon Active Vietnam since July 2020.</p>
       </div>
       <div class="col-lg-4 mr-auto">
-        <p class="pre-wrap lead">I love programming and always want to learn new things.</p>
-        <p class="pre-wrap lead">I am strong with Java (Spring) and Angular (7+).</p>
+        <p class="pre-wrap lead">I am passionate about programming and eager to learn new trends and technologies.</p>
+        <p class="pre-wrap lead">While being in loved and currently working with Java (Spring) and Angular (7+), I
+          always want to try something new (of course, in my spare time ;) ).</p>
       </div>
     </div>
   </div>
@@ -209,6 +228,7 @@
     <!-- Contact Section Heading-->
     <div class="text-center">
       <h2 class="page-section-heading text-secondary d-inline-block mb-0">CONTACT</h2>
+      <p class="pre-wrap mt-4"><strong>And do not hesitate to contact me (if you want) ;)</strong></p>
     </div>
     <!-- Icon Divider-->
     <div class="divider-custom">
@@ -222,14 +242,14 @@
         <div class="d-flex flex-column align-items-center">
           <div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div>
           <div class="text-muted">Phone</div>
-          <div class="lead font-weight-bold">(84) 909012695</div>
+          <div class="lead font-weight-bold">(84) 349097565</div>
         </div>
       </div>
       <div class="col-lg-4">
         <div class="d-flex flex-column align-items-center">
           <div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
           <div class="text-muted">Email</div>
-          <a class="lead font-weight-bold" href="mailto:name@example.com">tay.tc6@gmail.com</a>
+          <a class="lead font-weight-bold" href="mailto:tay.tc6@gmail.com">tay.tc6@gmail.com</a>
         </div>
       </div>
     </div>
@@ -255,9 +275,9 @@
       </div>
       <!-- Footer About Text-->
       <div class="col-lg-4">
-        <h4 class="mb-4">© Start Bootstrap/Freelance</h4>
-        <p class="pre-wrap mb-0">I've customized my home page from Freelance. Freelance is a free to use, MIT
-          licensed Bootstrap theme created by Start Bootstrap</p>
+        <p class="mb-4">© Start Bootstrap/Freelance</p>
+        <small class="pre-wrap mb-0">I've customized my home page from Freelance. Freelance is a free to use, MIT
+          licensed Bootstrap theme created by Start Bootstrap</small>
       </div>
     </div>
   </div>
